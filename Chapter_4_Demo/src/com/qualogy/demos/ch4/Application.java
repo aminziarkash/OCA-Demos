@@ -41,8 +41,8 @@ public class Application {
     }
 
     public void moreOperators() {
-        int first = firstOrg.numOfEmployees;
-        int second = secondOrg.numOfEmployees;
+        int first = firstOrg.getNumOfEmployees();
+        int second = secondOrg.getNumOfEmployees();
 
         // conditional operator
         String orgType = (first < 50) ? "Small" : "Medium-sized";
@@ -84,8 +84,8 @@ public class Application {
 
     public void compareNumOfEmployees() {
         System.out.println("Comparing amount of employees in both organizations...");
-        int first = firstOrg.numOfEmployees;
-        int second = secondOrg.numOfEmployees;
+        int first = firstOrg.getNumOfEmployees();
+        int second = secondOrg.getNumOfEmployees();
         String message = null;
 
         if (first == second) {
@@ -100,7 +100,7 @@ public class Application {
 
     public void compareOrgNames() {
         System.out.println("Comparing organization names...");
-        if (!firstOrg.name.equals(secondOrg.name)) {
+        if (!firstOrg.getName().equals(secondOrg.getName())) {
             System.out.println("The organization names are not the same");
         } else {
             System.out.println("Both organizations have the samen name");

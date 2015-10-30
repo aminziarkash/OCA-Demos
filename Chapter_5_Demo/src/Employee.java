@@ -1,13 +1,13 @@
 
 public class Employee {
 
-    private StringBuilder sb = new StringBuilder("Amin Ziarkash"); // Different ID
+    private StringBuilder name = new StringBuilder("Amin Ziarkash"); // Different ID
 
     public StringBuilder getName() {
-        return new StringBuilder(sb);
+        return new StringBuilder(name);
     }
 
     void printName() {
-        System.out.println("encapsulated, mutable StringBuilder content\t:\t" + sb);
+        System.out.println("encapsulated, mutable StringBuilder content\t:\t" + name);
     }
 }

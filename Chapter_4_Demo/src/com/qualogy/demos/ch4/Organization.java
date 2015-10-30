@@ -3,10 +3,10 @@ package com.qualogy.demos.ch4;
 public class Organization {
 
     // name of the organization
-    String name;
+    private String name;
 
     // number of employees in the organization
-    int numOfEmployees;
+    private int numOfEmployees;
 
     public String getName() {
         return name;

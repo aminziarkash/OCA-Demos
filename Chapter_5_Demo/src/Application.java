@@ -1,7 +1,12 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Application {
+/**
+ * 
+ * @author aziarkash
+ *
+ */
+public final class Application {
 
     public Application() {
 
@@ -43,17 +48,17 @@ public class Application {
         myName = myName.toUpperCase();
         System.out.println("my name (spelled wrong)\t\t:\t" + myName);
 
-        char a = myName.charAt(0);
-        char b = myName.charAt(1);
-        char c = myName.charAt(2);
-        char d = myName.charAt(3);
+        final char a = myName.charAt(0);
+        final char b = myName.charAt(1);
+        final char c = myName.charAt(2);
+        final char d = myName.charAt(3);
         System.out.println("backwards firstname\t\t:\t" + d + c + b + a);
-
-        int x = myName.length();
+        
+        final int x = myName.length();
         System.out.println("my name length\t\t\t:\t" + x);
 
-        char firstChar = myName.charAt(0);
-        char lastChar = myName.charAt(12);
+        final char firstChar = myName.charAt(0);
+        final char lastChar = myName.charAt(12);
         myName = myName.replace(firstChar, 'A');
         myName = myName.replace(lastChar, 'H');
         System.out.println("replaced wrong chars\t\t:\t" + myName);
@@ -66,7 +71,7 @@ public class Application {
         System.out.println("\nStringBuilder Class");
         addSeperatorLine();
 
-        StringBuilder sb = new StringBuilder("abc");
+        final StringBuilder sb = new StringBuilder("abc");
         System.out.println("actual string\t\t\t:\t" + sb);
 
         sb.append("def");
@@ -96,7 +101,7 @@ public class Application {
     }
 
     public void displayOneDimArray() {
-        String[] roleNames = {"Java Developer", "Data Scientist", "C++ Developer"};
+        final String[] roleNames = {"Java Developer", "Data Scientist", "C++ Developer"};
         for (int row = 0; row < roleNames.length; row++) {
             System.out.println("role name\t\t\t:\t" + roleNames[row]);
         }
@@ -106,7 +111,7 @@ public class Application {
         System.out.println("\nTwo-Dimensional Array");
         addSeperatorLine();
 
-        String[][] twoDimArray = new String[3][]; // Constructing a Two-Dimensional array with 3 rows
+        final String[][] twoDimArray = new String[3][]; // Constructing a Two-Dimensional array with 3 rows
         twoDimArray[0] = new String[2];
         twoDimArray[0][0] = "a";
         twoDimArray[0][1] = "b";
@@ -121,7 +126,7 @@ public class Application {
         addSeperatorLine();
     }
 
-    public void displayTwoDimArray(String x[][]) {
+    public void displayTwoDimArray(final String[][] x) {
         for (int row = 0; row < x.length; row++) {
             for (int column = 0; column < x[row].length; column++) {
                 System.out.print(x[row][column] + "\t");
@@ -134,13 +139,13 @@ public class Application {
         System.out.println("\nArrayList Class");
         addSeperatorLine();
 
-        List<String> list = new ArrayList<String>();
+        final List<String> list = new ArrayList<String>();
         list.add("Paris");
         list.add("London");
         list.add("Amsterdam");
         System.out.println("list of cities\t\t\t:\t" + list);
 
-        int index = list.indexOf("London");
+        final int index = list.indexOf("London");
         System.out.println("The index of 'London' is\t:\t" + index);
 
         list.add(index, "New York");
@@ -154,7 +159,7 @@ public class Application {
         list.add("Rotterdam");
         System.out.println("populated with some cities\t:\t" + list);
 
-        String secondIndex = list.get(1);
+        final String secondIndex = list.get(1);
         System.out.println("get second city from the list\t:\t[" + secondIndex + "]");
 
         list.remove(2);
@@ -167,7 +172,7 @@ public class Application {
         System.out.println("\nEncapsulating reference variables");
         addSeperatorLine();
 
-        Employee employee = new Employee();
+        final Employee employee = new Employee();
         StringBuilder sbObject = employee.getName(); // Different ID
         sbObject.append("Some more text");
         employee.printName();
